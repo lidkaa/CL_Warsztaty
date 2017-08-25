@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ------------------------------------------
 global class
 ------------------------------------------- */
@@ -64,3 +65,22 @@ body {
   font-weight: 600;
   line-height: 40px;
 }
+=======
+/* ------------------------------------------
+global class
+------------------------------------------- */
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 920px;
+    margin: 0 auto;
+}
+>>>>>>> 4a3565068d775ae4149f561abc832b9fede2b8f0
