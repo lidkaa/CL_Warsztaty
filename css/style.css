@@ -1,0 +1,21 @@
+/* ------------------------------------------
+global class
+------------------------------------------- */
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 920px;
+    margin: 0 auto;
+}
+
+/* ------------------------------------------
+layout
+------------------------------------------- */
