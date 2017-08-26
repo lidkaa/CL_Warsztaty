@@ -76,43 +76,117 @@
     </section>
 
     <section id="offer">
-        <div class="container row" id="offer-box">
-            <h3 class="headline-border"> Cennik <h3>
-            <div class="col1-3 offer-plan">
-                <div class="offer-plan-content">
-                    <p class="plan-name"> basic plan </p>
-                    <p class="plan-prize-1"> 85 <sup> 99 </sup> <br> <span id="money"> pln/msc </span> </p>
-                    <p class="plan-details"> Zakup towaru + dowóz </p>
-                    <p class="plan-details"> Serwis </p>
-                    <a href="/" class="plan-join green-button"> dołącz </a>
+        <div class="container row">
+            <h3 class="headline-border bottom-border"> Cennik <h3>
+
+            <div class="col1-3">
+                <div class="box offer-box1">
+                    <h4 class="box-headline"> basic plan </h4>
+                    <p class="price"> 85 <sup> 99 </sup> <br>        <!--dlaczego br nie działa?-->
+                        <span class="money">
+                     pln/msc </span> </p>
+
+                     <table class="table-details">
+                         <tr><td class="dark"> Zakup towaru + dowóz </td></tr>
+                         <tr><td class="light"> Serwis </td></tr>
+                    </table>
+
+                    <a href="/" class="green-button"> dołącz </a>
                 </div>
             </div>
 
-            <div class="col1-3 offer-plan">
-                <div class="offer-plan-content">
-                    <p class="plan-name"> basic plan </span>
-                    <span class="plan-prize-1"> 85 <sup> 99 </span>
-                    <span class="plan-prize-2"> pln/msc </span>
-                    <span class="plan-details"> Zakup towaru + dowóz </span>
-                    <span class="plan-details"> Serwis </span>
-                    <a href="/" class="plan-join green-button"> dołącz </a>
+            <div class="col1-3">
+                <div class="box offer-box2">
+                    <h4 class="box-headline"> basic plan </h4>
+                    <p class="price"> 85 <sup> 99 </sup> <br>        <!--dlaczego br nie działa?-->
+                        <span class="money">
+                     pln/msc </span> </p>
+
+                     <table class="table-details">
+                         <tr><td class="dark"> Zakup towaru + dowóz </td></tr>
+                         <tr><td class="light"> Serwis </td></tr>
+                         <tr><td class="dark"> Gwarancja 6 lat </td></tr>
+                    </table>
+
+                    <a href="/" class="green-button"> dołącz </a>
                 </div>
             </div>
 
-            <div class="col1-3 offer-plan">
-                <div class="offer-plan-content">
-                    <span class="plan-name" id="test"> basic plan </span>
-                    <span class="plan-prize-1"> 85 <sup> 99 </span>
-                    <span class="plan-prize-2"> pln/msc </span>
-                    <span class="plan-details"> Zakup towaru + dowóz </span>
-                    <span class="plan-details"> Serwis </span>
-                    <a href="/" class="plan-join green-button"> dołącz </a>
+            <div class="col1-3">
+                <div class="box offer-box3">
+                    <h4 class="box-headline"> basic plan </h4>
+                    <p class="price"> 85 <sup> 99 </sup> <br>        <!--dlaczego br nie działa?-->
+                        <span class="money">
+                     pln/msc </span> </p>
+
+                     <table class="table-details">
+                         <tr><td class="dark"> Zakup towaru + dowóz </td></tr>
+                         <tr><td class="light"> Serwis </td></tr>
+                         <tr><td class="dark"> Gwarancja 6 lat </td></tr>
+                         <tr><td class="light"> Porady projektanta </td></tr>
+                     </table>
+
+                    <a href="/" class="green-button"> dołącz </a>
                 </div>
             </div>
+        </div>
+    </section>
 
+    <section id="form">
+        <div class="container row">
+            <h3 class="headline-border bottom-border"> Kontakt <h3>
+            <div class="form-box">
+                <div class="form-input">
+                    <form class="input">
+                        <label>
+                            <span class="input-style">
+                                <input type="text" name="imię" placeholder="Imię">
+                            </span>
+                        </label>
+                        <label>
+                            <span class="input-style">
+                                <input type="text" name="e-mail" placeholder="E-mail">
+                            </span>
+                        </label>
+                        <label>
+                            <span class="input-style">
+                                <textarea name="message"> Wiadomość  </textarea>
+                            </span>
+                        </label>
+                </div>
+                <div class="form-checkbox">
+                    <img src="images/red_chair.png">
+                    <p id="form-text"> Lorem ipsum dolor sit amet, consectetur adipisicing.
+                    </p>
+                    <label class="input-style-ch">
+                        <input type="checkbox" name="button" placeholder="Wiadomość" checked>
+                    </label>
+
+                    <div id="img-checked"> </div>
+                        <button type="submit" value="Submit" class="green-button" id="submit"> Wyślij </button>
+                            <!-- <span> <i class="fa fa-check-square-o" aria-hidden="true"></i> </span>
+                             </input> -->
+
+                    </form>
+                </div>
+            </div>
         </div>
 
+    <footer id="footer">
+        <div class="container">
+            <div>
+                <p> Copyright 2014 | All rights Reserved - Sit On Chair </p>
 
 
+                     <img src="images/flickr.png">
+                     <img src="images/vimeo.png">
+                     <img src="images/pinterest.png">
+                     <img src="images/twitter.png">
+
+
+                <a href id="main-logo-link"> sit<span id="main-logo-on"> on </span> chair</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

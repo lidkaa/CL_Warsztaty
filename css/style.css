@@ -35,14 +35,14 @@ global class
     background-color: #24BA9F;
     text-align: center;
     text-decoration: none;
-    padding: 15px;
+    padding: 15px 20px;
     border: 0;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
-.row {
+/*.row {
     position: relative;
-}
+}*/
 
 .col1-3 {
     width: 33.3333%;
@@ -293,8 +293,6 @@ section id="products"
     overflow: hidden;
 }
 
-
-
 #products-text p {
     padding-top: 10px;
 }
@@ -305,45 +303,94 @@ section id="offer"
 #offer {
     background-color: #f1f1f1;
     margin-top: 100px;
-}
-
-#offer-box {
     height: 700px;
 }
 
-#offer-box  h3 {
+#offer .bottom-border {
+    width: 330px;
+}
+
+.container.row h3 {
     font-size: 25px;
-    font-weight: 400;
+    font-weight: 700;
     text-transform: uppercase;
     padding-top: 40px;
     margin-bottom: 20px;
 }
 
-.offer-plan {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.offer-plan-content {
+.box {
     background-color: #f9f9f9;
     height: 500px;
     text-align: center;
-    text-transform: uppercase;
-    border: 1px solid red;
+    border: 4px solid #c2c2c2;
+    margin: 0 15px;
     position: relative;
+    transition: 1s;
 }
 
-.plan-name {
+.box.offer-box1 {
+    float: left;
+    margin-left: 0;
+}
+
+.box.offer-box3 {
+    float: right;
+    margin-right: 0;
+}
+
+.box:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 5px solid #c2c2c2;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    transition: 1s;
+}
+
+.box:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #c2c2c2;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    transition: 1s;
+}
+
+.box:hover:after {
+    background-color: #fff;
+}
+
+.box:hover, .box:hover:before {
+    background-color: #24BA9F;
+    border-color: #24BA9F;
+    color: #fff;
+}
+
+.box .box-headline {
     font-weight: 600;
     color: #24BA9F;
+    text-transform: uppercase;
     position: absolute;
-    top: 20px;
+    top: 0;
     left: 0;
-    transform: translateX(50%);
+    transform: translate(50%, 100%);
+    display: block;
 }
 
-.plan-prize-1 {
+.box:hover .box-headline {
+    color: #fff;
+}
+
+.box .price {
     background-color: #fff;
     color: #c2c2c2;
     font-size: 30px;
@@ -353,26 +400,193 @@ section id="offer"
     border-radius: 50%;
     border: 1px solid #c2c2c2;
     position: absolute;
-    top:80px;
-    left: 50%;
-    transform: translateX(-50%);
+    top:0;
+    left:50%;
+    transform: translate(-50%, 100%);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#money {
-    font-size: 20px;
+.box .money {
+    font-size: 14px;
+    position: absolute;
+    top: 65px;
+    left: 12px;
+}
+/*mam tu problem w wyrównaniem - niby relative jest box - nie mogę dojść o co chodzi */
+
+.box .table-details td {
+    font-size: 19px;
+    color: #919191;
+    text-align: center;
+    line-height: 35px;
+    text-transform: none;
+    padding: 0 62px;
+}
+.box .table-detail {
+    margin-top: 100px;
 }
 
-.plan-details {
-    color: #919191;
+/* nie wiem dlaczego nie mogę odsunąć tablicy od górnej krawędzi boxa? - najpierw zrobiłam to na spanach, ale tablica chyba lepsza
+
+napisy wchodzą na ramkę i nie wiem dlaczego? */
+
+.box .light {
+    background-color: #f1f1f2;
+}
+
+.box .dark {
     background-color: #e4e4e4;
 }
 
-.offer-plan-content a {
+.box:hover .dark {
+    background-color: #fff;
+}
+
+.box a {
+    font-size: 20px;
+    position: absolute;
+    bottom:40px;
+    left:50%;
+    transform: translateX(-50%);
+    padding: 10px 15px;
+    display: block;
+}
+
+.box:hover .green-button {
+        color: #24BA9F;
+        background-color: #fff;
+}
+
+/* ------------------------------------------
+section id="form"
+------------------------------------------- */
+#form {
+    background-color: #fff;
+    margin-top: 20px;
+    height: 400px;
+
+}
+
+.form-box {
+    height: 400px;
+}
+
+#form .bottom-border {
+    width: 330px;
+}
+
+.form-input {
+    float: left;
+    width: 55%;
+    height: 100%;
+}
+
+.form-input input, textarea {
+    display: block;
+    padding: 25px;
+    margin: 10px 0;
+    letter-spacing: 2px;
+    border-width: 1px;
+    border-color: #24BA9F;
+    border-radius: 6px;
+    width: 100%;
+    /*z jakiego powodu robi się taki cień na górze i boku pola input?*/
+}
+
+.form-input input::placeholder, textarea {
+    color: #c2c2c2;
+}
+
+.form-input textarea {
+    height: 205px;
+    overflow: auto;
+}
+
+.form-checkbox {
+    float: right;
+    width: 45%;
+    height: 100%;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.input-style-ch {
+    position: absolute;
+    top: 99999999px;
+    display: none;
+}
+
+.form-checkbox img {
+    position: absolute;
+    top:0;
+    right:0;
+    transform: translate(-40%, -5%);
+}
+
+.form-checkbox p {
+    text-transform: none;
+    font-size: 18px;
+    color: #c2c2c2;
     position: absolute;
     bottom: 100px;
-    left: 0;
-    transform: translateX(100px);
+    left: 100px;
+}
+
+#img-checked {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #24BA9F;
+    border-radius: 5px;
+    background-image: url("../images/form_ok.jpg");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    bottom:0;
+    left:60px;
+    transform: translateY(-300%);
+}
+
+#submit {
+    font-size: 30px;
+    padding: 15px 150px;
+    position: absolute;
+    bottom:0;
+    right:0;
+    transform: translateX(-10%);
+}
+
+/* ------------------------------------------
+footer id="footer"
+------------------------------------------- */
+
+#footer {
+    height: 200px
+    border: 1px solid black;
+}
+
+#footer p {
+    font-size: 18px;
+    color: #c2c2c2;
+    float: left;
+
+}
+
+#footer div {
+    display: inline;
+    float: left;
+    margin: 50px;
+}
+
+#footer a {
+    color: #c2c2c2;
+    background-color: #fff;
+    float: right;
+    padding-left: 600px;
+}
+
+#footer #main-logo-on {
+    background-color: #fff;
 }
