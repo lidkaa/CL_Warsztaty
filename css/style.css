@@ -1,6 +1,6 @@
 /* ------------------------------------------
 global class
-------------------------------------------- */
+-------------------------------------------- */
 
 .clearfix:before,
 .clearfix:after {
@@ -662,10 +662,18 @@ section id="calc"
     font-size: 18px;
 }
 
-.order-details-list li,
+.order-details-list li {
+    padding: 5px 0;
+    padding-left: 8px;
+    color: #c2c2c2;
+    line-height: 25px;
+}
+
 .order-details-prices li {
     padding: 5px 0;
-    color: #c2c2c2;
+    color: #24BA9F;
+    text-align: right;
+    line-height: 25px;
 }
 
 .order-details-prices {
@@ -674,11 +682,14 @@ section id="calc"
 
 .order-sum span {
     padding: 5px;
-    float: left
+    float: left;
+    font-size: 20px;
+    /*font-weight: bold;*/
 }
 
 .order-sum .order-total-sum {
     float: right;
+    color: #24BA9F;
 }
 
 .orderBtn {
