@@ -70,7 +70,25 @@ global class
     display: block;
 }
 
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+    /* 1 */
+}
+
+
 /* kolor zielono-niebieski #24BA9F */
+
+
 /* ------------------------------------------
 layout
 ------------------------------------------- */
@@ -79,6 +97,8 @@ body {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
 }
+
+
 /* ------------------------------------------
 header
 ------------------------------------------- */
@@ -129,9 +149,11 @@ header
     background-color: #000;
 }
 
-            .main-menu a:hover {
-                color: #24BA9F;
-            }
+.main-menu a:hover {
+    color: #24BA9F;
+}
+
+
 /* ------------------------------------------
 submenu ze strzałką
 ------------------------------------------- */
@@ -146,6 +168,8 @@ submenu ze strzałką
     display: none;
     z-index: 1;
 }
+
+
 /* .main-menu li:hover .sub-menu {
     display: block;
 } */
@@ -187,6 +211,8 @@ submenu ze strzałką
     text-transform: none;
     background-color: #000;
 }
+
+
 /* ------------------------------------------
 section id="slider"
 ------------------------------------------- */
@@ -277,6 +303,7 @@ section id="slider"
     width: 60%;
 }
 
+
 /* ------------------------------------------
 section id="products"
 ------------------------------------------- */
@@ -359,6 +386,8 @@ section id="products"
     padding: 20px;
     overflow: hidden;
 }
+
+
 /* ------------------------------------------
 section id="offer"
 ------------------------------------------- */
@@ -477,6 +506,7 @@ section id="offer"
     padding: 7px 0;
 }
 
+
 /* middle box - green style  ------------------*/
 
 .box.offer-box2 {
@@ -503,6 +533,8 @@ section id="offer"
 .box.green-box:after {
     background-color: #fff;
 }
+
+
 /* ------------------------------------------
 section id="calc"
 ------------------------------------------- */
@@ -537,7 +569,6 @@ section id="calc"
 .select-container {
     overflow: visible;
     background: url(../images/arrow.png) no-repeat right #fff;
-
 }
 
 .calc-select {
@@ -558,6 +589,8 @@ section id="calc"
 .calc-select:focus {
     outline: 0;
 }
+
+
 /* lewa strona formularza---------------- */
 
 .calc-form-left {
@@ -574,12 +607,16 @@ section id="calc"
     margin-top: -50px;
 }
 
+
 /* środek formularza-------------------- */
 
 .calc-form-center {
     text-align: center;
     flex-grow: 1;
+    margin-bottom: 90px;
 }
+
+
 /* prawa strona formularza----------- */
 
 .calc-form-right {
@@ -597,7 +634,7 @@ section id="calc"
 
 .order-prices,
 .order-details {
-/* border: 2px solid blue; */
+    /* border: 2px solid blue; */
     width: 50%;
     height: 160px;
 }
@@ -647,17 +684,20 @@ section id="calc"
 .orderBtn {
     width: 100%;
 }
+
 .orderChair {
     margin-top: 20px;
     transform: scale(0.8, 0.8);
 }
+
+
 /* ------------------------------------------
 section id="form"
 ------------------------------------------- */
 
 #form {
-    background-color: #fff;
-    height: 450px;
+    background-color: #f1f1f1;
+    height: 500px;
     margin-top: -100px;
     width: 100%;
 }
@@ -670,6 +710,7 @@ section id="form"
     width: 100%;
     height: 350px;
 }
+
 
 /* formularz - lewa strona ----------------------------- */
 
@@ -705,6 +746,7 @@ textarea:focus {
     height: 150px;
     resize: none;
 }
+
 
 /* formularz - prawa strona --------------------------------*/
 
@@ -780,13 +822,15 @@ textarea:focus {
     font-size: 30px;
     width: 100%;
 }
+
+
 /* ------------------------------------------
 footer id="footer"
 ------------------------------------------- */
 
 #footer {
     height: 200px;
-    margin-top: 100px;
+    margin-top: 20px;
 }
 
 #footer .container {
@@ -799,6 +843,8 @@ footer id="footer"
     line-height: 35px;
     color: #c2c2c2;
 }
+
+
 /* ----------------------------------------------------- */
 
 .social-icons-box {
@@ -834,6 +880,8 @@ footer id="footer"
 .social-icons .social-twitter {
     background: url(../images/twitter.png) no-repeat;
 }
+
+
 /* ------------------------------------------------------- */
 
 .main-logo-link.main-logo-grey {

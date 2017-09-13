@@ -1,45 +1,33 @@
 // zadanie 01 - wysuwanie podmenu
 
-// var mainMenu = document.querySelectorAll(".main-menu>li");
+var mainMenu = document.querySelectorAll(".main-menu>li");
 
-// console.log(mainMenu);
+function showMenu(event) {
+    var subMenu = this.children;
+    for (var i = 0; i < subMenu.length; i++) {
+        subMenu[i].style.display = "block";
+    };
+};
 
-// for (var i = 0; i < mainMenu.length; i++) {
-//     mainMenu[i].addEventListener("mouseover", show);
-//     mainMenu[i].addEventListener("mouseout", hide);
-// }
+function hideMenu(event) {
+    var subMenu = this.children;
+    for (var i = 1; i < subMenu.length; i++) {
+        subMenu[i].style.display = "none";
+    };
+};
 
-// function show(event) {
-//     var subMenu = this.children;
-//     for (var i = 0; i < subMenu.length; i++) {
-//         if (subMenu[i].getAttribute("class") == "sub-menu") {
-//             subMenu[i].classList.add("visible");
-//         }
-//         // console.log(subMenu[i]);
-//         // console.log(typeof subMenu[i]);
-//     }
-// }
+for (var i = 0; i < mainMenu.length; i++) {
+    mainMenu[i].addEventListener("mouseover", showMenu);
+    mainMenu[i].addEventListener("mouseout", hideMenu);
+};
 
-// function hide(event) {
-//     var subMenu = this.children;
-//     if (subMenu[i].getAttribute("class") == "sub-menu visible") {
-//         subMenu[i].classList.remove("visible");
-//     }
-// }
-
-
-///////////////////////////////////////////////////////
+// ==============================================================
 // zadanie 2 - chowanie opisu
 var Product01 = document.querySelector(".photo.product01");
 var Product02 = document.querySelector(".photo.product02");
 var textToHide01 = document.querySelectorAll(".photo-headline.product01");
 var textToHide02 = document.querySelectorAll(".photo-headline.product02");
 
-
-Product01.addEventListener("mouseover", hide);
-Product02.addEventListener("mouseover", hide);
-Product01.addEventListener("mouseout", show);
-Product02.addEventListener("mouseout", show);
 
 function hide(event) {
     this.querySelector("div").style.display = "none";
@@ -49,8 +37,13 @@ function show(event) {
     this.querySelector("div").style.display = "block";
 };
 
-///////////////////////////////////////////////////
-//zadanie 3 - slider
+Product01.addEventListener("mouseover", hide);
+Product02.addEventListener("mouseover", hide);
+Product01.addEventListener("mouseout", show);
+Product02.addEventListener("mouseout", show);
+
+//=============================================================
+// zadanie 3 - slider
 var next = document.querySelector(".slider-prev");
 var prev = document.querySelector(".slider-next");
 var imagesList = document.querySelectorAll(".slide-photo");
@@ -79,7 +72,8 @@ prev.addEventListener("click", function() {
     };
     imagesList[counter].classList.add("visible");
 });
-///////////////////////////////////////////////////////////
+
+// ===============================================================
 //zadanie 4 - kalkulator
 
 var items = document.querySelector(".items");
@@ -94,44 +88,49 @@ var colorPrice = document.querySelector(".order-color-price");
 var materialPrice = document.querySelector(".order-material-price");
 var transportCheckbox = document.querySelector(".img-checked");
 var transportPrice = document.querySelector(".order-transport-price");
+var detailPrices = document.querySelectorAll(".order-details-prices li");
 var totalSum = document.querySelector(".order-total-sum");
+totalSum.innerText = 0 + " pln";
 var sum = 0;
+var price = 0;
 
-console.log(transportCheckbox);
-//pobieram wartości z select
+// // funkcje   ==================================================
+// // do poprawienia sumowanie - dodaje przy kolejnym kliknięciu - nie wiem jeszcze jak ogarnąć odjęcie kwoty za odznaczoną opcję.
 
+function order(selectedItem) {
+    var  data = selectedItem.options[selectedItem.selectedIndex].dataset;
+    price = parseInt(data.price);
+    if(selectedItem.selectedIndex = 1) {   //////////// warunki do poprawy
+        sum = sum + price;
+        totalSum.innerText = sum + " pln";
+    } else {
+        sum = sum - price;
+        totalSum.innerText = sum + " pln";
+    }
+}
+
+// ==========
 items.addEventListener("change", function() {
-    orderItem.innerText = items.value;
-     var  data= items.options[items.selectedIndex].dataset;
-     var  price= parseInt(data.price);
+    order(this);
+    orderItem.innerText = this.value;
      itemPrice.innerText = price + " pln";
-     sum = sum + price;
-     totalSum.innerText = sum + " pln";
 });
 
 colors.addEventListener("change", function() {
-    orderColor.innerText = colors.value;
-    var  data= colors.options[colors.selectedIndex].dataset;
-    var  price= parseInt(data.price);
+    order(this);
+    orderColor.innerText = this.value;
     colorPrice.innerText = price + " pln";
-    sum = sum + price;
-    totalSum.innerText = sum + " pln";
 });
 
 material.addEventListener("change", function() {
-    orderMaterial.innerText = material.value;
-    var  data= material.options[material.selectedIndex].dataset;
-    var  price= parseInt(data.price);
+    order(this);
+    orderMaterial.innerText = this.value;
     materialPrice.innerText = price + " pln";
-    sum = sum + price;
-    totalSum.innerText = sum + " pln";
 });
 
 transportCheckbox.addEventListener("click", function() {
     var transport = document.querySelector(".transport");
     orderTransport.innerText = transport.innerText;
-    var price = parseInt(transportCheckbox.dataset.price);
-    transportPrice.innerText = price;
-    sum = sum + price;
-    totalSum.innerText = sum + " pln";
+    var price = parseInt(this.dataset.price);
+    transportPrice.innerText = price + " pln";
 });

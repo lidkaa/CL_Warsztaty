@@ -14,61 +14,69 @@
     <header id="main-header">
         <div class="container">
             <h1>
-                <a href class="main-logo-link"> sit <span class="main-color"> on </span> chair </a>
+                <a href="/" class="main-logo-link"> sit <span class="main-color"> on </span> chair </a>
             </h1>
+
+<!-- navi --------------------------------------------------------------------->
 
             <nav class="main-navi">
                 <ul class="main-menu">
-                    <li> <a href=""> o firmie </a>
+                    <li>
+                        <a href="#"> o firmie </a>
                         <ul class="sub-menu">
-                            <li> <a href=""> Aktualności </a> </li>
-                            <li> <a href=""> O firmie </a> </li>
-                            <li> <a href=""> Historia </a> </li>
+                            <li> <a href="#"> Aktualności </a> </li>
+                            <li> <a href="#"> O firmie </a> </li>
+                            <li> <a href="#"> Historia </a> </li>
                         </ul>
                     </li>
-                    <li> <a href=""> galeria </a> </li>
-                    <li> <a href=""> kontakt </a> </li>
+                    <li> <a href="#"> galeria </a> </li>
+                    <li> <a href="#"> kontakt </a> </li>
                 </ul>
             </nav>
         </div>
     </header>
 
+<!-- slider ------------------------------------------------------------------->
+
     <section id="slider">
         <div class="container">
-            <button type="button" class="slider-prev"> &lt; </button>
-            <div class="slider-items">
-                <div class="slide-active">
-                    <div class="slide-photo">
-                        <img src="images/black_chair.png" class="slide-main-photo">
-                    </div>
-                    <div class="slide-photo">
-                        <img src="images/red_chair_big.png" class="slide-main-photo">
-                    </div>
-                    <div class="slide-photo">
-                        <img src="images/brown_chair.png" class="slide-main-photo">
-                    </div>
-
-                    <div class="slide-content">
-                        <div class="slide-title">
-                            sit <span class="main-color"> on </span> our <span class="main-color"> chair </span>
+            <div class="slider-box">
+                <button type="button" class="slider-prev"> &lt; </button>
+                <div class="slider-items">
+                    <div class="slide-active">
+                        <div class="slide-photo">
+                            <img src="images/black_chair.png" class="slide-main-photo">
+                        </div>
+                        <div class="slide-photo">
+                            <img src="images/red_chair_big.png" class="slide-main-photo">
+                        </div>
+                        <div class="slide-photo">
+                            <img src="images/brown_chair.png" class="slide-main-photo">
                         </div>
 
-                        <div class="slide-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                        <div class="slide-content">
+                            <div class="slide-title">
+                                sit <span class="main-color"> on </span> our <span class="main-color"> chair </span>
+                            </div>
+
+                            <div class="slide-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                            </div>
+
+                            <a href="#" class="green-button slide-button"> Zobacz więcej </a>
                         </div>
 
-                        <a href=" " class="green-button slide-button"> Zobacz więcej </a>
                     </div>
-
                 </div>
+                <button type="button" class="slider-next"> &gt; </button>
             </div>
-            <button type="button" class="slider-next"> &gt; </button>
-
         </div>
     </section>
 
+<!-- section id="products"  --------------------------------------------------->
+
     <section id="products">
-        <h2> Produkty </h2>
+        <h2 class="healine-products"> Produkty </h2>
         <div class="container">
             <div class="row">
                 <div class="col1-3">
@@ -106,6 +114,8 @@
         </div>
     </section>
 
+<!-- section id="offer"  ------------------------------------------------------>
+
     <section id="offer">
         <div class="container">
             <h3 class="headline-border bottom-border"> Cennik </h3>
@@ -122,7 +132,7 @@
                             <li>Serwis</li>
                         </ul>
 
-                        <a href="/" class="green-button "> dołącz </a>
+                        <a href="#" class="green-button "> dołącz </a>
                     </div>
                 </div>
 
@@ -138,7 +148,7 @@
                             <li>Gwarancja 5 lat</li>
                         </ul>
 
-                        <a href="/ " class="green-button"> dołącz </a>
+                        <a href="#" class="green-button"> dołącz </a>
                     </div>
                 </div>
 
@@ -156,12 +166,14 @@
                             <li>Porady projektanta</li>
                         </ul>
 
-                        <a href="/ " class="green-button"> dołącz </a>
+                        <a href="#" class="green-button"> dołącz </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+<!-- section id="calc"  ------------------------------------------------------->
 
     <section id="calc">
         <div class="container">
@@ -252,21 +264,22 @@
         </div>
     </section>
 
+<!-- section id="form"  ------------------------------------------------------->
+
     <section id="form">
         <div class="container">
             <h3 class="headline-border bottom-border"> Kontakt </h3>
 
-            <form class="input">
-
+            <div class="form-container">
                 <div class="row">
-                    <div class="form-container">
+                    <form class="input">
                         <div class="col">
                             <div class="form-left">
-                                <label for="name"></label>
+                                <label for="name" class="visuallyhidden">Imię</label>
                                 <input type="text" id="name" name="name" placeholder="Imię" class="form-input">
-                                <label for="e-mail"></label>
+                                <label for="e-mail" class="visuallyhidden">E-mail</label>
                                 <input type="text" id="e-mail" name="e-mail" placeholder="E-mail" class="form-input">
-                                <label for="message"></label>
+                                <label for="message" class="visuallyhidden">Message</label>
                                 <textarea name="message" id="message" placeholder="Wiadomość"></textarea>
                             </div>
                         </div>
@@ -285,17 +298,20 @@
                                 </div>
                                 <button type="submit" class="green-button"> Wyślij </button>
                             </div>
-
-                        </div>
+                        </form>
                     </div>
-
-            </form>
+                </div>
             </div>
+        </div>
     </section>
+
+<!-- section id="footer"  ----------------------------------------------------->
 
     <footer id="footer">
         <div class="container">
-            <div class="copy"> Copyright 2014 | All rights Reserved - Sit On Chair </div>
+            <div class="copy">
+                Copyright 2014 | All rights Reserved - Sit On Chair
+            </div>
 
             <div class="social-icons-box">
                 <ul class="social-icons">
@@ -306,7 +322,7 @@
                 </ul>
             </div>
 
-            <a href class="main-logo-link main-logo-grey"> sit <span> on </span> chair </a>
+            <a href="/" class="main-logo-link main-logo-grey"> sit <span> on </span> chair </a>
         </div>
     </footer>
 
